@@ -11,6 +11,8 @@
 		FA8F3FDE2ADB5679000BECD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F3FDD2ADB5679000BECD5 /* ContentView.swift */; };
 		FA8F3FE02ADB567B000BECD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8F3FDF2ADB567B000BECD5 /* Assets.xcassets */; };
 		FA8F3FE32ADB567B000BECD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8F3FE22ADB567B000BECD5 /* Preview Assets.xcassets */; };
+		FA8F3FEA2ADB7C4C000BECD5 /* RollResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F3FE92ADB7C4C000BECD5 /* RollResults.swift */; };
+		FA8F3FEC2ADB7CE8000BECD5 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F3FEB2ADB7CE8000BECD5 /* FileManager-DocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		FA8F3FDD2ADB5679000BECD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA8F3FDF2ADB567B000BECD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8F3FE22ADB567B000BECD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA8F3FE92ADB7C4C000BECD5 /* RollResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollResults.swift; sourceTree = "<group>"; };
+		FA8F3FEB2ADB7CE8000BECD5 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				FA8F3FDB2ADB5679000BECD5 /* DiceRollerApp.swift */,
 				FA8F3FDD2ADB5679000BECD5 /* ContentView.swift */,
+				FA8F3FE92ADB7C4C000BECD5 /* RollResults.swift */,
+				FA8F3FEB2ADB7CE8000BECD5 /* FileManager-DocumentsDirectory.swift */,
 				FA8F3FDF2ADB567B000BECD5 /* Assets.xcassets */,
 				FA8F3FE12ADB567B000BECD5 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				FA8F3FDE2ADB5679000BECD5 /* ContentView.swift in Sources */,
 				FA8F3FDC2ADB5679000BECD5 /* DiceRollerApp.swift in Sources */,
+				FA8F3FEC2ADB7CE8000BECD5 /* FileManager-DocumentsDirectory.swift in Sources */,
+				FA8F3FEA2ADB7C4C000BECD5 /* RollResults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
