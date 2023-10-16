@@ -62,7 +62,7 @@ struct ContentView: View {
         VStack {
             
             Text("Your rolled a: ")
-            Text("\(rollResult)")
+            Text( hasRolled ? "\(rollResult)" : "...")
                 .font(.title2)
                 .bold()
                 .padding(.bottom)
@@ -74,7 +74,7 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 15.0)
                         .frame(width: 200, height: 200)
                         .foregroundStyle(.white)
-                        .shadow(radius: 20, x: -15, y: 10)
+                        .shadow(radius: 12, x: -40, y: -15)
                     
                     if hasRolled {
                         LazyVGrid (columns: postRollGridItems, spacing: 25) {
@@ -108,7 +108,7 @@ struct ContentView: View {
                 .onChange(of: diceSides) {
                     hasRolled = false
                 }
-                .accentColor(.black)
+                .accentColor(.white)
                 .scaleEffect(CGSize(width: 1.5, height: 1.5))
             }
             .padding(.vertical, 35)
@@ -124,23 +124,27 @@ struct ContentView: View {
                         ForEach(rolls.results, id: \.self) {result in
                             Text("\(result)")
                         }
+                        .foregroundStyle(.black)
                         .listRowSeparatorTint(.brown, edges: .all)
 //                        .listRowBackground(Color(.brown))
                     }
                     .scrollContentBackground(.hidden)
-                    .background(Color.brown.edgesIgnoringSafeArea(.all))
+                    .background(.ultraThinMaterial.opacity(0.6))
+                    .clipShape(RoundedRectangle(cornerRadius: 15.0))
                     
                     Button {
                         rolls.clearResults()
                     } label: {
                         Text("Clear Results")
-                            .font(.title)
+                            .foregroundStyle(.mint)
+                            .font(.title.bold())
                             .padding(10)
                             .background(.ultraThinMaterial)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .shadow(radius: 10)
                             
                     }
+                    .padding(.top)
                 }
                 
             }
@@ -148,7 +152,7 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
-        .background(.brown)
+        .background(Image("billiardsGreen"))
         .onReceive(timer) { time in
             guard timerIsActive else { return }
             if rollTime > 0 {
@@ -159,6 +163,7 @@ struct ContentView: View {
                 recordRoll()
             }
         }
+        .foregroundStyle(.white)
         .preferredColorScheme(.light)
     }
     
