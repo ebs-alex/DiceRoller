@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ViewModel()
+    
     private var preRollGridItems: [GridItem] {
-        if diceSides < 11 {
+        if viewModel.diceSides < 11 {
             [
                 .init(.flexible(), spacing: 2),
                 .init(.flexible(), spacing: 2),
@@ -53,7 +55,7 @@ struct ContentView: View {
     @State private var timerIsActive = false
 
     @StateObject var rolls = RollResults()
-    @State private var diceSides = 6
+//    @State private var viewModel.diceSides = 6
     @State private var rollResult = 6
     @State private var hasRolled = false
     @State private var feedback = UINotificationFeedbackGenerator()
@@ -87,9 +89,9 @@ struct ContentView: View {
                         .frame(width: 130, height: 200)
                     } else {
                         LazyVGrid (columns: preRollGridItems, spacing: 25) {
-                            ForEach (0...diceSides - 1, id: \.self) { circle in
+                            ForEach (0...viewModel.diceSides - 1, id: \.self) { circle in
                                 Circle()
-                                    .frame(width: min(40, CGFloat(120 / diceSides)), height: min(40, CGFloat(120 / diceSides)))
+                                    .frame(width: min(40, CGFloat(120 / viewModel.diceSides)), height: min(40, CGFloat(120 / viewModel.diceSides)))
                                     .foregroundStyle(.black)
                             }
                         }
@@ -100,12 +102,12 @@ struct ContentView: View {
             
             VStack {
                 Text("Amount of Dice Sides")
-                Picker("Amount of Dice Sides", selection: $diceSides) {
+                Picker("Amount of Dice Sides", selection: $viewModel.diceSides) {
                     ForEach (2...20, id: \.self) {
                         Text("\($0)")
                     }
                 }
-                .onChange(of: diceSides) {
+                .onChange(of: viewModel.diceSides) {
                     hasRolled = false
                 }
                 .accentColor(.white)
@@ -157,7 +159,7 @@ struct ContentView: View {
             guard timerIsActive else { return }
             if rollTime > 0 {
                 rollTime -= 1
-                rollResult = Int.random(in: 1...diceSides)
+                rollResult = Int.random(in: 1...viewModel.diceSides)
             } else {
                 timerIsActive = false
                 recordRoll()

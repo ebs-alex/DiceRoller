@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1EFB7B2AE3A30E00A6CFF6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EFB7A2AE3A30E00A6CFF6 /* ViewModel.swift */; };
 		FA8F3FDC2ADB5679000BECD5 /* DiceRollerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F3FDB2ADB5679000BECD5 /* DiceRollerApp.swift */; };
 		FA8F3FDE2ADB5679000BECD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F3FDD2ADB5679000BECD5 /* ContentView.swift */; };
 		FA8F3FE02ADB567B000BECD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8F3FDF2ADB567B000BECD5 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1EFB7A2AE3A30E00A6CFF6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FA8F3FD82ADB5679000BECD5 /* DiceRoller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8F3FDB2ADB5679000BECD5 /* DiceRollerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollerApp.swift; sourceTree = "<group>"; };
 		FA8F3FDD2ADB5679000BECD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				FA8F3FDB2ADB5679000BECD5 /* DiceRollerApp.swift */,
 				FA8F3FDD2ADB5679000BECD5 /* ContentView.swift */,
+				FA1EFB7A2AE3A30E00A6CFF6 /* ViewModel.swift */,
 				FA8F3FE92ADB7C4C000BECD5 /* RollResults.swift */,
 				FA8F3FEB2ADB7CE8000BECD5 /* FileManager-DocumentsDirectory.swift */,
 				FA8F3FDF2ADB567B000BECD5 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1EFB7B2AE3A30E00A6CFF6 /* ViewModel.swift in Sources */,
 				FA8F3FDE2ADB5679000BECD5 /* ContentView.swift in Sources */,
 				FA8F3FDC2ADB5679000BECD5 /* DiceRollerApp.swift in Sources */,
 				FA8F3FEC2ADB7CE8000BECD5 /* FileManager-DocumentsDirectory.swift in Sources */,
